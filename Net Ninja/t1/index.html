@@ -9,7 +9,9 @@
 </head>
 <body>
   <div id="vue-app">
+    <p>{{greet("good After noon")}}</p>
     <h1>{{ name }}</h1>
+    <p>{{job}}</p>
   </div>
 
   <!-- Use the full Vue 2 build with compiler -->
@@ -20,7 +22,13 @@
     new Vue({
       el: "#vue-app",
       data: {
-        name: "udud0099"
+        name: "udud0099",
+        job: "FrontEnd"
+      },
+      methods: {
+        greet: function(a){
+            return "Good Morning " + this.name + " " + a
+        }
       }
     });
   </script>
